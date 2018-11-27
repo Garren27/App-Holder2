@@ -1,36 +1,38 @@
 import React, {Component} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
+import { createStackNavigator, createAppContainer } from "react-navigation";
 import _ from 'lodash';
 import importedStyles from './styles';
+import Intro from './Intro';
+import VeryEasy from './VeryEasy';
+import Easy from './Easy';
+import Hard from './Hard';
+import VeryHard from './VeryHard';
 
 const styles = _.cloneDeep(importedStyles);
 
-export default class Activity2 extends Component {
+const Activity2Navigator = createStackNavigator(
+    {
+        Intro,
+        VeryEasy,
+        Easy,
+        Hard,
+        VeryHard
+    },
+    {
+        headerMode: 'none',
+        initialRouteName: 'Intro'
+    }
+)
+
+const Activity2Container = createAppContainer(Activity2Navigator);
+
+export default class Activity1 extends Component {
     render() {
-        return(
-            <View
-                style={styles.root}
-            >
-                <View>
-                    <Text
-                        style={styles.activityTitle}
-                    >
-                        Activity 2
-                    </Text>
-                </View>
-                <TouchableOpacity
-                    style={styles.backButton.root}
-                    onPress={() => {
-                        this.props.navigation.navigate('Activity1')
-                    }}
-                >
-                    <Text
-                        style={styles.backButton.text}
-                    >
-                        back
-                    </Text>
-                </TouchableOpacity>
-            </View>
+        return (
+            <Activity2Container
+                screenProps={{navigation: this.props.navigation}}
+            />
         )
     }
 }

@@ -7,20 +7,29 @@ export default styles = {
         alignItems: 'center',
         backgroundColor: globalStyles.magenta
     },
-    activityTitle: {
+    centerBox: {
+        activityTitle: {
 
+        }
+    },
+    forwardButton: {
+        root: {
+            position: 'absolute',
+            padding: 10,
+            backgroundColor: globalStyles.purpleButton,
+            borderRadius: 18,
+            bottom: 30,
+            right: 20
+        }
     },
     backButton: {
         root: {
             position: 'absolute',
             padding: 10,
+            backgroundColor: globalStyles.purpleButton,
             borderRadius: 18,
-            top: 20,
-            left: 20,
-            backgroundColor: globalStyles.purpleButton
-        },
-        text: {
-
+            top: 30,
+            left: 20
         }
     }
 }

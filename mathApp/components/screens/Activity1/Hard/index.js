@@ -2,44 +2,55 @@ import React, {Component} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import _ from 'lodash';
 import importedStyles from './styles';
+import globalStyles from 'mathApp/globalStyles';
 
 const styles = _.cloneDeep(importedStyles);
 
-export default class Hard extends Component {
+export default class Easy extends Component {
     render() {
         return(
             <View
-                style={styles.root}
+                style={globalStyles.screenRoot('center')}
             >
                 <TouchableOpacity
-                    style={styles.backButton.root}
+                    style={globalStyles.backButton.root}
                     onPress={() => {
                         this.props.navigation.navigate('Easy')
                     }}
                 >
                     <Text
-                        style={styles.backButton.text}
+                        style={globalStyles.backButton.text}
                     >
-                        back
+                        Easier
+                    </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={globalStyles.activitySelectorButton.root}
+                    onPress={() => {
+                        this.props.screenProps.navigation.navigate('ActivitySelector')
+                    }}
+                >
+                    <Text
+                        style={globalStyles.activitySelectorButton.text}
+                    >
+                        Activity Selector
                     </Text>
                 </TouchableOpacity>
                 <View>
-                    <Text
-                        style={styles.centerBox.activityTitle}
-                    >
+                    <Text>
                         Hard
                     </Text>
                 </View>
                 <TouchableOpacity
-                    style={styles.forwardButton.root}
+                    style={globalStyles.forwardButton.root}
                     onPress={() => {
                         this.props.navigation.navigate('VeryHard')
                     }}
                 >
                     <Text
-                        style={styles.forwardButton.text}
+                        style={globalStyles.forwardButton.text}
                     >
-                        forward
+                        Harder
                     </Text>
                 </TouchableOpacity>
             </View>

@@ -11,7 +11,7 @@ import VeryHard from './VeryHard';
 
 const styles = _.cloneDeep(importedStyles);
 
-const Activity2Navigator = createStackNavigator(
+const Activity1Navigator = createStackNavigator(
     {
         Intro,
         VeryEasy,
@@ -25,12 +25,12 @@ const Activity2Navigator = createStackNavigator(
     }
 )
 
-const Activity2Container = createAppContainer(Activity2Navigator);
+const Activity1Container = createAppContainer(Activity1Navigator);
 
-export default class Activity2 extends Component {
+export default class Activity1 extends Component {
     render() {
         return (
-            <Activity2Container
+            <Activity1Container
                 screenProps={{navigation: this.props.navigation}}
             />
         )

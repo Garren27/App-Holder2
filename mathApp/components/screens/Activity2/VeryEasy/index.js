@@ -2,44 +2,43 @@ import React, {Component} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import _ from 'lodash';
 import importedStyles from './styles';
+import globalStyles from 'mathApp/globalStyles';
 
 const styles = _.cloneDeep(importedStyles);
 
-export default class VeryEasy extends Component {
+export default class Easy extends Component {
     render() {
         return(
             <View
-                style={styles.root}
+                style={globalStyles.screenRoot('center')}
             >
                 <TouchableOpacity
-                    style={styles.backButton.root}
+                    style={globalStyles.activitySelectorButton.root}
                     onPress={() => {
-                        this.props.navigation.navigate('Intro')
+                        this.props.screenProps.navigation.navigate('ActivitySelector')
                     }}
                 >
                     <Text
-                        style={styles.backButton.text}
+                        style={globalStyles.activitySelectorButton.text}
                     >
-                        back
+                        Activity Selector
                     </Text>
                 </TouchableOpacity>
                 <View>
-                    <Text
-                        style={styles.centerBox.activityTitle}
-                    >
-                        VeryEasy
+                    <Text>
+                        Very Easy
                     </Text>
                 </View>
                 <TouchableOpacity
-                    style={styles.forwardButton.root}
+                    style={globalStyles.forwardButton.root}
                     onPress={() => {
                         this.props.navigation.navigate('Easy')
                     }}
                 >
                     <Text
-                        style={styles.forwardButton.text}
+                        style={globalStyles.forwardButton.text}
                     >
-                        forward
+                        Harder
                     </Text>
                 </TouchableOpacity>
             </View>

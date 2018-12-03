@@ -6,6 +6,7 @@ const colours = {
 export default globalStyles = {
     magenta: colours.magenta,
     purpleButton: colours.purpleButton,
+    bubbleBlue: "#8AC8E4",
     screenRoot: (orientation) => ({
         flex: 1,
         justifyContent: orientation,

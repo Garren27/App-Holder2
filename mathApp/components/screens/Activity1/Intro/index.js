@@ -4,6 +4,9 @@ import _ from 'lodash';
 import importedStyles from './styles';
 import globalStyles from 'mathApp/globalStyles';
 
+// Import reusables
+import NumberBubble from '@reusables/NumberBubble';
+
 const styles = _.cloneDeep(importedStyles);
 
 export default class Intro extends Component {
@@ -29,6 +32,7 @@ export default class Intro extends Component {
                         Activity 1 Intro
                     </Text>
                 </View>
+                <NumberBubble/>
                 <TouchableOpacity
                     style={globalStyles.forwardButton.root}
                     onPress={() => {

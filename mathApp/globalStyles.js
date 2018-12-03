@@ -7,6 +7,9 @@ export default globalStyles = {
     magenta: colours.magenta,
     purpleButton: colours.purpleButton,
     bubbleBlue: "#8AC8E4",
+    thermometerGrey: "#E2DDDD",
+    thermometerGreyBackground: "#D0CDCD",
+    mercuryRed: "#EC0303",
     screenRoot: (orientation) => ({
         flex: 1,
         justifyContent: orientation,

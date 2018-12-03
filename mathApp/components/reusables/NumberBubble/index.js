@@ -12,7 +12,9 @@ export default class NumberBubble extends Component {
             <View
                 style={styles.container}
             >
-                
+                <Text>
+                    {this.props.number}
+                </Text>
             </View>
         )
     }

@@ -34,6 +34,66 @@ export default class Thermometer extends Component {
                     >
 
                     </View>
+                    <View
+                        style={{
+                            position: 'absolute',
+                            left: -10,
+                            bottom: 55,
+                            width: 10
+                        }}
+                    >
+                        <Text>
+                            1
+                        </Text>
+                    </View>
+                    <View
+                        style={{
+                            position: 'absolute',
+                            left: -10,
+                            bottom: 90,
+                            width: 10
+                        }}
+                    >
+                        <Text>
+                            2
+                        </Text>
+                    </View>
+                    <View
+                        style={{
+                            position: 'absolute',
+                            left: -10,
+                            bottom: 125,
+                            width: 10
+                        }}
+                    >
+                        <Text>
+                            3
+                        </Text>
+                    </View>
+                    <View
+                        style={{
+                            position: 'absolute',
+                            left: -10,
+                            bottom: 160,
+                            width: 10
+                        }}
+                    >
+                        <Text>
+                            4
+                        </Text>
+                    </View>
+                    <View
+                        style={{
+                            position: 'absolute',
+                            left: -10,
+                            bottom: 195,
+                            width: 10
+                        }}
+                    >
+                        <Text>
+                            5
+                        </Text>
+                    </View>
                 </View>
                 <View
                     style={styles.bottom.root}

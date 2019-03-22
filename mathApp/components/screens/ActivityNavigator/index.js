@@ -16,8 +16,8 @@ const ActivityNavigatorStack = createStackNavigator(
         ActivitySelector,
         Activity1,
         Activity2,
-        Activity3,
         Activity4,
+        Activity3,
         Activity5,
         Activity6,
         Activity7,
@@ -35,6 +35,6 @@ export default class ActivityNavigator extends Component {
     render() {
         return(
             <ActivityNavigatorContainer/>
-        )
+        );
     }
 }

@@ -26,7 +26,7 @@ export default class Intro extends Component {
                 <Text
                     style={styles.centerBox.welcomeMessage}
                 >
-                    Welcome!
+                    Welcome to the Math App!
                 </Text>
                 <TouchableOpacity
                     style={styles.centerBox.button.root}
@@ -40,6 +40,20 @@ export default class Intro extends Component {
                         Play as Guest
                     </Text>
                 </TouchableOpacity>
+                <Text> </Text>
+                <TouchableOpacity
+                    style={styles.centerBox.button.root}
+                    onPress={() => {
+                        this.props.navigation.navigate('LoginNavigator')
+                    }}
+                >
+                    <Text
+                        style={styles.centerBox.button.text}
+                    >
+                        Login to Play
+                    </Text>
+                </TouchableOpacity>
+              
             </View>
         )
     }
